@@ -1,0 +1,301 @@
+/* ============================= */
+/* Semester Pages Style */
+/* ============================= */
+
+
+.semester-page{
+
+    width:90%;
+    max-width:1200px;
+    margin:50px auto;
+    text-align:center;
+
+}
+
+
+.semester-page h1{
+
+    font-size:40px;
+    margin-bottom:50px;
+    color:#ffc400;
+
+}
+
+
+
+
+/* ================= SUBJECTS ================= */
+
+
+.subjects-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
+    gap:25px;
+
+}
+
+
+
+.subject-card{
+
+    background:rgba(255,255,255,.15);
+
+    border:
+    1px solid rgba(255,255,255,.25);
+
+    border-radius:25px;
+
+    padding:25px;
+
+    backdrop-filter:blur(15px);
+
+    box-shadow:
+    0 15px 35px rgba(0,0,0,.25);
+
+    transition:.4s;
+
+}
+
+
+
+.subject-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+
+
+.subject-card h3{
+
+    color:#ffc400;
+
+    font-size:22px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.subject-card p{
+
+    margin-bottom:20px;
+
+}
+
+
+
+.grade{
+
+    width:90%;
+
+    padding:14px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:15px;
+
+    text-align:center;
+
+    font-size:18px;
+
+}
+
+
+
+.grade:focus{
+
+    box-shadow:
+    0 0 15px #ffc400;
+
+}
+
+
+
+/* ================= RESULT ================= */
+
+
+.result-box{
+
+    margin-top:20px;
+
+    font-size:35px;
+
+    font-weight:800;
+
+}
+
+
+
+.good .letter{
+
+    color:#00e676;
+
+}
+
+
+
+.bad .letter{
+
+    color:#ff1744;
+
+}
+
+
+
+
+
+/* ================= BUTTONS ================= */
+
+
+.action-panel{
+
+    margin:50px 0;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+.action-panel button,
+.back-btn{
+
+
+    background:#c60b1e;
+
+    color:white;
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+
+
+.action-panel button:hover,
+.back-btn:hover{
+
+
+    background:#ffc400;
+
+    color:#111;
+
+
+    transform:translateY(-5px);
+
+}
+
+
+
+/* ================= DASHBOARD ================= */
+
+
+.dashboard{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    margin-bottom:50px;
+
+}
+
+
+
+.dash-card{
+
+
+    background:rgba(255,255,255,.18);
+
+    border-radius:25px;
+
+    padding:30px;
+
+    backdrop-filter:blur(15px);
+
+}
+
+
+
+.dash-card h3{
+
+    color:#ffc400;
+
+    margin-bottom:15px;
+
+}
+
+
+
+.dash-card p{
+
+    font-size:40px;
+
+    font-weight:800;
+
+}
+
+
+
+
+
+@media(max-width:600px){
+
+
+.semester-page h1{
+
+    font-size:30px;
+
+}
+
+
+.dash-card p{
+
+    font-size:32px;
+
+}
+
+
+}
+.grade{
+
+    transition:0.3s ease;
+
+}
+
+
+.grade:focus{
+
+    transform:scale(1.03);
+
+    box-shadow:0 0 15px #ffc400;
+
+}

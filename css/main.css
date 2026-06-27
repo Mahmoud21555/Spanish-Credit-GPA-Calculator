@@ -1,0 +1,483 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo',sans-serif;
+}
+
+
+:root{
+
+    --red:#c60b1e;
+    --yellow:#ffc400;
+    --dark:#111827;
+    --card:rgba(255,255,255,.15);
+    --text:#ffffff;
+
+}
+
+
+body{
+
+    min-height:100vh;
+    color:var(--text);
+    overflow-x:hidden;
+    background:#111;
+
+}
+
+
+/* ================= BACKGROUND ================= */
+
+
+.background{
+
+    position:fixed;
+
+    inset:0;
+
+    z-index:-2;
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.70)
+    ),
+
+    url("../assets/images/spain-bg.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    animation:zoomSpain 20s infinite alternate;
+
+}
+
+
+@keyframes zoomSpain{
+
+    from{
+
+        background-size:100%;
+
+    }
+
+
+    to{
+
+        background-size:115%;
+
+    }
+
+}
+
+
+
+.background::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    radial-gradient(circle at 20% 30%,rgba(255,255,255,.15),transparent 30%),
+    radial-gradient(circle at 80% 70%,rgba(255,255,255,.1),transparent 25%);
+
+    animation:bgMove 10s infinite alternate;
+
+}
+
+
+@keyframes bgMove{
+
+    from{
+
+        transform:scale(1);
+
+    }
+
+    to{
+
+        transform:scale(1.15);
+
+    }
+
+}
+
+
+
+
+/* ================= FLAG ================= */
+
+
+.flag-wave{
+
+    position:absolute;
+
+    top:80px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    font-size:100px;
+
+    animation:wave 3s infinite ease-in-out;
+
+    filter:drop-shadow(0 10px 20px #000);
+
+}
+
+
+@keyframes wave{
+
+    0%,100%{
+
+        transform:
+        translateX(-50%)
+        rotate(-5deg);
+
+    }
+
+
+    50%{
+
+        transform:
+        translateX(-50%)
+        rotate(5deg);
+
+    }
+
+}
+
+
+
+/* ================= HEADER ================= */
+
+
+.home-header{
+
+    width:90%;
+
+    margin:30px auto;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+.brand{
+
+    font-size:32px;
+
+    font-weight:800;
+
+}
+
+
+.theme-btn{
+
+    border:none;
+
+    background:rgba(255,255,255,.2);
+
+    color:white;
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:50%;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+
+
+/* ================= HERO ================= */
+
+
+.hero{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+    text-align:center;
+
+}
+
+
+.intro h1{
+
+    font-size:45px;
+
+    margin-top:60px;
+
+}
+
+
+.intro h2{
+
+    color:var(--yellow);
+
+    margin:15px;
+
+}
+
+
+.intro p{
+
+    font-size:20px;
+
+    line-height:2;
+
+}
+
+
+
+
+/* ================= CARDS ================= */
+
+
+.main-cards{
+
+    margin-top:60px;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+
+    gap:30px;
+
+}
+
+
+
+.main-card{
+
+    text-decoration:none;
+
+    color:white;
+
+    background:var(--card);
+
+    border:1px solid rgba(255,255,255,.25);
+
+    padding:35px 20px;
+
+    border-radius:25px;
+
+    backdrop-filter:blur(15px);
+
+    transition:.4s;
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.25);
+
+}
+
+
+.main-card:hover{
+
+    transform:
+    translateY(-15px)
+    scale(1.03);
+
+    background:
+    rgba(255,255,255,.25);
+
+}
+
+
+.icon{
+
+    font-size:55px;
+
+    margin-bottom:20px;
+
+}
+
+
+.main-card h3{
+
+    font-size:28px;
+
+    color:var(--yellow);
+
+}
+
+
+.main-card p{
+
+    margin-top:15px;
+
+}
+
+
+
+
+/* ================= FEATURES ================= */
+
+
+.features{
+
+    margin:60px auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+}
+
+
+.features div{
+
+    background:rgba(255,255,255,.15);
+
+    padding:15px 25px;
+
+    border-radius:30px;
+
+    backdrop-filter:blur(10px);
+
+}
+
+
+
+
+/* ================= FOOTER ================= */
+
+
+footer{
+
+    text-align:center;
+
+    padding:30px;
+
+    opacity:.8;
+
+}
+
+
+
+
+/* ================= DARK MODE ================= */
+
+
+body.dark{
+
+    filter:
+
+    brightness(.7);
+
+}
+
+
+
+/* ================= MOBILE ================= */
+
+
+@media(max-width:600px){
+
+
+.brand{
+
+    font-size:22px;
+
+}
+
+
+.intro h1{
+
+    font-size:32px;
+
+}
+
+
+.flag-wave{
+
+    font-size:70px;
+
+}
+
+
+}
+/* ================= FINAL POLISH ================= */
+
+.main-card,
+.subject-card,
+.dash-card{
+
+    transition:0.4s ease;
+
+}
+
+
+.main-card:hover,
+.subject-card:hover,
+.dash-card:hover{
+
+    transform:translateY(-10px) scale(1.02);
+
+    box-shadow:0 25px 50px rgba(0,0,0,.4);
+
+}
+button{
+
+    transition:0.3s ease;
+
+}
+
+
+button:hover{
+
+    box-shadow:0 0 20px rgba(255,196,0,0.6);
+
+}
+body{
+
+    animation:fadeIn 0.8s ease-in-out;
+
+}
+
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
