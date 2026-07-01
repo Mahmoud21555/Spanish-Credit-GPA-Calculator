@@ -26,15 +26,18 @@ const GPA_KEY = isTerm1 ? "term1_gpa" : "term2_gpa";
 
 function getGPA(mark){
 
-    if(mark >= 90) return 4.0;
-    if(mark >= 85) return 3.7;
-    if(mark >= 80) return 3.3;
-    if(mark >= 75) return 3.0;
-    if(mark >= 70) return 2.7;
-    if(mark >= 65) return 2.3;
-    if(mark >= 60) return 2.0;
-    if(mark >= 50) return 1.3;
-    if(mark >= 40) return 1.0;
+    if(mark >= 97) return 4.0;
+    if(mark >= 93) return 3.7;
+    if(mark >= 90) return 3.4;
+    if(mark >= 84) return 3.1;
+    if(mark >= 80) return 2.8;
+    if(mark >= 76) return 2.5;
+    if(mark >= 70) return 2.2;
+    if(mark >= 67) return 1.9;
+    if(mark >= 64) return 1.6;
+    if(mark >= 62) return 1.3;
+    if(mark >= 60) return 1.2;
+    if(mark >= 50) return 1.0;
 
     return 0;
 }
@@ -44,16 +47,18 @@ function getGPA(mark){
 
 function getLetter(mark){
 
-    if(mark >= 90) return "A";
-    if(mark >= 85) return "A-";
-    if(mark >= 80) return "B+";
-    if(mark >= 75) return "B";
-    if(mark >= 70) return "B-";
-    if(mark >= 65) return "C+";
-    if(mark >= 60) return "C";
-    if(mark >= 50) return "D+";
-    if(mark >= 40) return "D";
-
+    if(mark >= 97) return "A+";
+    if(mark >= 93) return "A";
+    if(mark >= 90) return "A-";
+    if(mark >= 84) return "B+";
+    if(mark >= 80) return "B";
+    if(mark >= 76) return "B-";
+    if(mark >= 70) return "C+";
+    if(mark >= 67) return "C";
+    if(mark >= 64) return "C-";
+    if(mark >= 62) return "D+";
+    if(mark >= 60) return "D";
+    if(mark >= 50) return "D-";
     return "F";
 }
 
@@ -127,7 +132,7 @@ calcBtn.addEventListener("click",()=>{
         return;
     }
 
-    let gpa = (totalPoints / totalCredits).toFixed(2);
+    let gpa = (totalPoints / totalCredits).toFixed(3);
     let avg = (totalMarks / subjects.length).toFixed(1);
 
     document.getElementById("gpa").textContent = gpa;
