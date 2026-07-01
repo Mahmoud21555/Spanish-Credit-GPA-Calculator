@@ -17,11 +17,11 @@ parseFloat(localStorage.getItem("term2_gpa")) || 0;
 // عرض الترمين
 
 document.getElementById("term1").textContent =
-term1GPA.toFixed(2);
+term1GPA.toFixed(3);
 
 
 document.getElementById("term2").textContent =
-term2GPA.toFixed(2);
+term2GPA.toFixed(3);
 
 
 
@@ -49,7 +49,7 @@ const yearGPA =
 
 
 document.getElementById("yearGpa").textContent =
-yearGPA.toFixed(2);
+yearGPA.toFixed(3);
 
 
 
