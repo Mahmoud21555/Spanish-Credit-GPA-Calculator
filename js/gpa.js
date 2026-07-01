@@ -26,7 +26,7 @@ const GPA_KEY = isTerm1 ? "term1_gpa" : "term2_gpa";
 
 function getGPA(mark){
 
-    if(mark >= 97) return 4.0;
+    if(mark >= 95) return 4.0;
     if(mark >= 93) return 3.9;
     if(mark >= 90) return 3.7;
     if(mark >= 85) return 3.3;
@@ -45,7 +45,7 @@ function getGPA(mark){
 
 function getLetter(mark){
 
-    if(mark >= 97) return "A+";
+    if(mark >= 95) return "A+";
     if(mark >= 93) return "A";
     if(mark >= 90) return "A-";
     if(mark >= 85) return "B+";
